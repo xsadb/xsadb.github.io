@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <title>Wiedźmin</title>
+    <link rel="stylesheet" href="style2.css" type="text/css"/>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <link rel="shortcut icon" href="img/icon.ico">
+    
+				<script>
+		
+			
+		
+			var numer = Math.floor(Math.random()*5)+1;
+			
+			var timer1 = 0;
+			var timer2 = 0;
+			
+			function ustawslajd(nrslajdu)
+			{
+				clearTimeout(timer1);
+				clearTimeout(timer2);
+				numer = nrslajdu - 1;
+				
+				hide();
+				setTimeout("change()", 500);
+				
+			}
+			
+		
+			function change()
+			{
+				numer++; if (numer>4) numer=1;
+				
+				var plik = "<img src=\"img/wiedzmin/slajd" + numer + ".jpg\" />";
+				
+				document.getElementById("slider").innerHTML = plik;
+				
+				timer1 = setTimeout("change()", 3000);
+				timer2 = setTimeout("hide()", 2500);
+			
+			}
+			
+		
+			
+		</script>
+
+</head>
+
+<body onload="change()" data-gr-c-s-loaded="true">
+ 
+    <div id="container">
+       <div id="header">
+           <table>
+                <tr>
+                <td>&nbsp;Wiedźmin</td>
+                    <td>&nbsp;&nbsp;</td>
+                <td style="font-size:20px;">gatunek: RPG, przygodowa gra akcji</td>
+                </tr>
+	       </table>
+        </div> 
+        
+           <div id="content">
+               <div style="text-align: center"><img id="logo" src="img/logob.png" alt="logo"/></div>
+               <div class="button"><a href="index.html" class="buttonlink">Powrót</a></div>
+               <div class="button"><a href="https://wiedzmin.fandom.com/wiki/Wied%C5%BAmin_Wiki" class="buttonlink">Więcej informacji</a></div>
+               <div class="button"><a href="formularz.html" class="buttonlink">Formularz</a></div>
+               <div class="txt">linki otwierają się w tej samej karcie</div>
+            </div>
+        
+        <div id="description">
+            <p>Komputerowa gra fabularna w konwencji fantasy, wyprodukowana przez CD Projekt Red i wydana przez Atari. Jej premiera odbyła się 26 października 2007 roku na platformie Microsoft Windows, natomiast w kwietniu 2012 roku ukazała się jej wersja na komputery z systemem OS X.</p>
+
+            <p>Akcja gry toczy się w świecie wiedźmina, stworzonym przez Andrzeja Sapkowskiego. Głównym bohaterem gry, w którego wciela się gracz, jest Geralt z Rivii – jeden z wiedźminów, czyli postaci o nadludzkich zdolnościach, zajmujących się zwykle zabijaniem potworów atakujących siedliska ludzi. Po wydarzeniach z Sagi o wiedźminie Geralt, pozbawiony pamięci, próbuje na nowo odnaleźć się w mrocznej rzeczywistości świata gry, pozbawionej wyraźnego podziału na dobro i zło. W miarę rozwoju gry Geralt jest zmuszony do podjęcia licznych wyborów moralnych, rzutujących na dalsze losy napotkanych bohaterów niezależnych.</p>
+            
+            <h3>Kolejne części głównej serii to:</h3>
+                <ol>
+                    <li>Wiedźmin</li>
+                    <li>Wiedźmin 2: Zabójcy Królów</li>
+                    <li>Wiedźmin 3: Dziki Gon</li>
+                </ol>
+            <br>
+            <div id="slider"></div>
+        </div>
+        
+        <div id="content2">
+	  
+               <div style="text-align: center"><img id="logo" src="img/wiedzmin/w1.jpg" alt="logo"/></div>
+               <div style="text-align: center"><img id="logo" src="img/wiedzmin/w2.jpg" alt="logo"/></div>
+               <div style="text-align: center"><img id="logo" src="img/wiedzmin/w3.jpg" alt="logo"/></div>
+        </div> 
+    
+       <div id="footer"><p id="podpis">Kwiecień 2020<p></div>
+
+    </div>
+</body>
+</html>

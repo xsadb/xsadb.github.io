@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <title>Far Cry</title>
+    <link rel="stylesheet" href="style2.css" type="text/css"/>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <link rel="shortcut icon" href="img/icon.ico">
+    
+		<script>
+		
+			
+		
+			var numer = Math.floor(Math.random()*5)+1;
+			
+			var timer1 = 0;
+			var timer2 = 0;
+			
+			function ustawslajd(nrslajdu)
+			{
+				clearTimeout(timer1);
+				clearTimeout(timer2);
+				numer = nrslajdu - 1;
+				
+				hide();
+				setTimeout("change()", 500);
+				
+			}
+			
+		
+			function change()
+			{
+				numer++; if (numer>4) numer=1;
+				
+				var plik = "<img src=\"img/farcry/slajd" + numer + ".jpg\" />";
+				
+				document.getElementById("slider").innerHTML = plik;
+				
+				timer1 = setTimeout("change()", 3000);
+				timer2 = setTimeout("hide()", 2500);
+			
+			}
+			
+		
+			
+		</script>
+
+</head>
+
+<body onload="change()" data-gr-c-s-loaded="true">
+ 
+    <div id="container">
+       <div id="header">
+           <table>
+                <tr>
+                <td>&nbsp;Far Cry</td>
+                    <td>&nbsp;&nbsp;</td>
+                <td style="font-size:20px;">gatunek: gra akcji, strzelanka</td>
+                </tr>
+	       </table>
+        </div> 
+        
+           <div id="content">
+               <div style="text-align: center"><img id="logo" src="img/logob.png" alt="logo"/></div>
+               <div class="button"><a href="index.html" class="buttonlink">Powrót</a></div>
+               <div class="button"><a href="https://farcry.fandom.com/pl/wiki/Seria_Far_Cry" class="buttonlink">Więcej informacji</a></div>
+               <div class="button"><a href="formularz.html" class="buttonlink">Formularz</a></div>
+               <div class="txt">linki otwierają się w tej samej karcie</div>
+            </div>
+        
+        <div id="description">
+            <p>Seria pierwszoosobowych strzelanek Far Cry została zapoczątkowana 23 marca 2004 roku, wraz z wydaniem gry Far Cry, wyprodukowanej przez niemieckie studio Crytek. Później prawa do marki zostały sprzedane wydawcy gry, francuskiej firmie Ubisoft, która wydana kilka mniejszych kontynuacji na konsole. Pełnoprawna część druga została wydania w 2008 roku, Far Cry 3 ukazał się w 2012 roku, natomiast kolejna odsłona marki zaledwie dwa lata później. Pod koniec lutego 2016 roku ukazała się gra Far Cry Primal, która w przeciwności do swoich poprzedniczek jest przygodową grą akcji osadzoną w czasach prehistorycznych. Najnowsza odsłona serii, Far Cry 5 premierę miała w marcu 2018 roku.</p>
+            
+            <h3>Kolejne części serii to:</h3>
+                <ol style="font-size:15px;">
+                    <li>Far Cry</li>
+                    <li>Far Cry 2</li>
+                    <li>Far Cry 3</li>
+                    <li>Far Cry: Blood Dragon - niezależny dodatek do Far Cry 3</li>
+                    <li>Far Cry Primal</li>
+                    <li>Far Cry 4</li>
+                    <li>Far Cry 5</li>
+                    <li>Far Cry New Dawn</li>
+                </ol>
+            <br>
+            <div id="slider"></div>
+        </div>
+        
+        <div id="content2">
+	  
+               <div style="text-align: center"><img id="logo" src="img/farcry/fc1.jpg" alt="logo"/></div>
+               <div style="text-align: center"><img id="logo" src="img/farcry/fc2.jpg" alt="logo"/></div>
+               <div style="text-align: center"><img id="logo" src="img/farcry/fc3.jpg" alt="logo"/></div>
+        </div> 
+    
+       <div id="footer"><p id="podpis">Kwiecień 2020<p></div>
+
+    </div>
+</body>
+</html>

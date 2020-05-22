@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <title>Danganronpa</title>
+    <link rel="stylesheet" href="style2.css" type="text/css"/>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <link rel="shortcut icon" href="img/icon.ico">
+    
+				<script>
+			
+			var numer = Math.floor(Math.random()*5)+1;
+			
+			var timer1 = 0;
+			var timer2 = 0;
+			
+			function ustawslajd(nrslajdu)
+			{
+				clearTimeout(timer1);
+				clearTimeout(timer2);
+				numer = nrslajdu - 1;
+				
+				hide();
+				setTimeout("change()", 500);	
+			}
+			function change()
+			{
+				numer++; if (numer>4) numer=1;
+				
+				var plik = "<img src=\"img/danganronpa/slajd" + numer + ".jpg\" />";
+				
+				document.getElementById("slider").innerHTML = plik;
+				
+				timer1 = setTimeout("change()", 3000);
+				timer2 = setTimeout("hide()", 2500);
+			}
+		</script>
+
+</head>
+
+<body onload="change()">
+ 
+    <div id="container">
+       <div id="header">
+           <table>
+                <tr>
+                <td>&nbsp;Danganronpa</td>
+                    <td>&nbsp;&nbsp;</td>
+                <td style="font-size:20px;">gatunek: detektywistyczna, visual novel</td>
+                </tr>
+	       </table>
+        </div> 
+        
+           <div id="content">
+               <div style="text-align: center"><img id="logo" src="img/logob.png" alt="logo"/></div>
+               <div class="button"><a href="index.html" class="buttonlink">Powrót</a></div>
+               <div class="button"><a href="https://danganronpa.fandom.com/pl/wiki/Danganronpa" class="buttonlink">Więcej informacji</a></div>
+               <div class="button"><a href="formularz.html" class="buttonlink">Formularz</a>
+               </div>
+               <div class="txt">linki otwierają się w tej samej karcie</div>
+            </div>
+        
+        <div id="description">
+            <p>Seria opiera się na ekskluzywnym liceum zwanym Hope's Peak Academy, które każdego roku wybiera "Ultimate" uczniów, będący najlepszymi ze swojej dziedziny oraz jeden wyjątek, czyli "Ultimate Szczęściarz", który jest wybierany przez loterię. Jednak, gdy przeciętny uczeń, Makoto Naegi przybywa do szkoły, traci świadomość, a po obudzeniu widzi, że on i 14 innych uczniów zostało uwięzionych w szkole.</p>
+            <p>Dyrektor szkoły Monokuma, sadystyczny robot miś, informuje uczniów, o tym, iż będą zmuszeni żyć na zawsze w tej szkole z jedną drogą ucieczki: zabijając innego ucznia i nie zostając złapanym. Kiedy morderstwo jest odkryte, rozpoczyna się rozprawa klasowa, w której pozostali uczniowie muszą zdecydować kto jest mordercą. Jeżeli uda im się odnaleźć mordercę, na winowajcy zostanie wykonana egzekucja i zabójcza gra będzie dalej trwać. Jeżeli im się nie uda, sprawca ucieknie, ale na innych uczniach zostanie wykonana egzekucja.</p>
+            
+            <h3>Kolejne części serii to:</h3>
+                <ol>
+                    <li>Danganronpa: Trigger Happy Havoc</li>
+                    <li>Danganronpa 2: Goodbye Despair</li>
+                    <li>Danganronpa V3: Killing Harmony</li>
+                </ol>
+            <br>
+            <div id="slider"></div>
+        </div>
+        
+        <div id="content2">
+	  
+               <div style="text-align: center"><img id="logo" src="img/danganronpa/dangan1.png" alt="logo"/></div>
+               <div style="text-align: center"><img id="logo" src="img/danganronpa/dangan2.jpg" alt="logo"/></div>
+               <div style="text-align: center"><img id="logo" src="img/danganronpa/dangan3.jpg" alt="logo"/></div>
+        </div> 
+    
+       <div id="footer"><p id="podpis">Kwiecień 2020<p></div>
+
+    </div>
+</body>
+</html>

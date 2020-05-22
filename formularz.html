@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <title>Formularz</title>
+    <link rel="stylesheet" href="form.css" type="text/css"/>
+        <link rel="shortcut icon" href="img/icon.ico">
+</head>
+
+<body onload="change()">
+ 
+    <div id="container">
+           <div id="header">&nbsp;Formularz</div>
+        
+           <div id="content">
+               <div style="text-align:center"><img id="logo1" src="img/logob.png" alt="logo"/></div>
+               <div class="button"><a href="index.html" class="buttonlink">Powrót</a></div>
+               
+               <div class="txt">link otwiera się w tej samej karcie</div>
+            </div>
+        
+        <div id="description">
+            <h3>Zapraszam Cię do wzięcia udziału w krótkiej ankiecie.</h3>
+                <ul>
+                    <li><p>Wypełnienie jej zajmie Ci z pewnością dużo mniej czasu, niż mi zajęło jej zrobienie.</p></li>
+                </ul>                    
+            <hr>
+        <form action="mailto:imabassicuser@gmail.com Subject=ankieta" method="post" enctype="text/plain">
+            
+        <h3>Grasz w gry?</h3>
+              <input type="radio" name="q1" id="y" value="y" checked>
+              <label for="y">Tak</label><br>
+              <input type="radio" name="q1" id="n" value="n">
+              <label for="n">Nie</label><br><br>
+            
+        <h3>Jaka jest twoja ulubiona gra? </h3>
+                <ul>
+                   <li>jeśli w pierwszym pytaniu odpowiedziałeś_aś "nie", zostaw to pole puste.</li>
+                </ul>
+            &nbsp;&nbsp;
+                <input type="text" name="q2" style="width: 400px;" value=" gry nazwa tu."><br><br>
+            
+        <h3>Tu jest miejsce żebyś napisał_a, co ci leży na sercu.</h3>&nbsp; <textarea name="message" rows="3" cols="70">piszesz tu.</textarea><br><br>
+            
+                <br><br><br><br><br><br><br><br>
+            
+            <button type="submit" id="btn">Wyślij formularz</button>
+            <button type="reset" id="btn">Wyczyść formularz</button>
+        </form></div>
+        
+            <div id="content2">
+
+                   <div style="text-align: center"><img id="logo2" src="img/form.png" alt="logo"/></div>
+            </div>
+        
+           <div id="footer"><p id="podpis">Kwiecień 2020<p></div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,96 @@
+body{
+	color: #504a6f;
+	background-color: #504a6f;
+	font-family: "Courier New";
+}
+
+#container{
+	width: 1500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header{
+	font-family: "Courier New";
+	margin: 20px;
+	background-color: #b4b0ca;
+	font-size:50px;
+	width: 1460px;
+	text-align: center;
+}
+
+#content{
+	width: 260px;
+	height:720px;
+	float: left;
+	background-color: #b4b0ca;
+	font-family: "Lucida Console";
+	margin: 20px;	
+}
+
+
+#logo{
+	float: left;
+	background-color: #b4b0ca;
+	height:660px;
+	width: 1100px;
+	margin:20px;
+	padding:30px;
+	text-align: center;
+}
+
+.button{
+	margin: 10px;
+	width: 240px;
+	height: 40px;
+	background-color: #7d8ba8;
+	font-size:20px;
+	text-align: center;
+	padding-top:10px;
+}
+
+.blank{
+	width: 240px;
+	height: 40px;
+	background-color: #b4b0ca;
+}
+
+.button:hover{
+	background-color: #404a60;
+}
+
+a.buttonlink{
+	text-decoration:none;
+	display:block;
+	margin: 5px;
+	font-size:20px;
+	text-align: center;
+	color:white;
+}
+
+.txt{
+	text-align: center;
+	color: #282538;
+}
+
+#footer{
+	width: 1490px;
+	margin:20px;
+	margin-top:10px;
+	text-align:center;
+}
+
+#podpis{
+	font-size:17px;
+	color: #b4b0ca;
+	text-align:center;
+	font-family: "Courier New";
+}
+
+
+p{
+	font-size:17px;
+	color: #b4b0ca;
+	text-align:center;
+	font-family: "Courier New";
+}
